@@ -109,7 +109,7 @@ RUN chmod +x /start.sh
 # Welcome Message
 COPY --from=logo runpod.txt /etc/runpod.txt
 RUN echo 'cat /etc/runpod.txt' >> /root/.bashrc
-RUN echo 'echo -e "\nFor detailed documentation and guides, please visit:\n\033[1;34mhttps://docs.runpod.io/\033[0m and \033[1;34mhttps://blog.runpod.io/\033[0m\n\n"' >> /root/.bashrc
+RUN echo 'echo -e "\nFor detailed documentation and guides, please visit:\n\033[1;34mhttps://docs.pix3dify.com/\033[0m and \033[1;34mhttps://blog.pix3dify.com/\033[0m\n\n"' >> /root/.bashrc
 
 # Set the default command for the container
 CMD [ "/start.sh" ]
