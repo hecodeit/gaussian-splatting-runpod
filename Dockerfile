@@ -89,7 +89,7 @@ RUN git clone https://github.com/graphdeco-inria/gaussian-splatting --recursive
 RUN cd gaussian-splatting && \
     pip install plyfile tqdm
 RUN pwd && ls -la
-RUN pip install submodules/diff-gaussian-rasterization
+RUN cd gaussian-splatting && pip install submodules/diff-gaussian-rasterization
 RUN pip install submodules/simple-knn
 RUN cd ..
 
