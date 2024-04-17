@@ -78,8 +78,7 @@ RUN cd colmap && \
     git checkout FETCH_HEAD && \
     mkdir build && \
     cd build && \
-    cmake .. -GNinja -DCMAKE_CUDA_ARCHITECTURES="70;72;75;80;86" \
-        -DCMAKE_INSTALL_PREFIX=/colmap_installed && \
+    cmake .. -GNinja -DCMAKE_CUDA_ARCHITECTURES="70;72;75;80;86" && \
     ninja install
 RUN cd ../../ && rm -rf colmap
 
