@@ -47,7 +47,7 @@ RUN jupyter contrib nbextension install --user && \
 
 # Set up Colmap
 ARG COLMAP_GIT_COMMIT=3.8
-ARG CUDA_ARCHITECTURES=native
+ARG CUDA_ARCHITECTURES=all
 ENV QT_XCB_GL_INTEGRATION=xcb_egl
 
 RUN apt-get update && \
