@@ -45,6 +45,14 @@ RUN pip install notebook==6.5.5
 RUN jupyter contrib nbextension install --user && \
     jupyter nbextension enable --py widgetsnbextension
 
+# Set up Gaussian Splatting
+RUN git clone https://github.com/graphdeco-inria/gaussian-splatting --recursive
+RUN cd gaussian-splatting && \
+    pip install plyfile tqdm && \
+    pip install submodules/diff-gaussian-rasterization && \
+    pip install submodules/simple-knn
+RUN cd ..
+
 # Remove existing SSH host keys
 RUN rm -f /etc/ssh/ssh_host_*
 
