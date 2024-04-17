@@ -12,7 +12,7 @@ group "default" {
 
 target "gaussian-splatting" {
     dockerfile = "Dockerfile"
-    tags = ["runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04"]
+    tags = ["heyulei/gaussian-splatting:0.1"]
     contexts = {
         scripts = "container-template"
         proxy = "container-template/proxy"
