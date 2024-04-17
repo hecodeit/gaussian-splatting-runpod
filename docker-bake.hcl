@@ -14,9 +14,9 @@ target "191-py39-cuda111-devel-ubuntu2004" {
     dockerfile = "Dockerfile"
     tags = ["runpod/pytorch:1.9.1-py3.9-cuda11.1.1-devel-ubuntu20.04"]
     contexts = {
-        scripts = "../../container-template"
-        proxy = "../../container-template/proxy"
-        logo = "../../container-template"
+        scripts = "container-template"
+        proxy = "container-template/proxy"
+        logo = "container-template"
     }
     args = {
         BASE_IMAGE = "nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04"
@@ -30,9 +30,9 @@ target "1131-py38-cuda1171-devel-ubuntu2204" {
     dockerfile = "Dockerfile"
     tags = ["runpod/pytorch:1.13.0-py3.10-cuda11.7.1-devel-ubuntu22.04"]
     contexts = {
-        scripts = "../../container-template"
-        proxy = "../../container-template/proxy"
-        logo = "../../container-template"
+        scripts = "container-template"
+        proxy = "container-template/proxy"
+        logo = "container-template"
     }
     args = {
         BASE_IMAGE = "nvidia/cuda:11.8.0-devel-ubuntu22.04"
@@ -46,9 +46,9 @@ target "201-py310-cuda1180-devel-ubuntu2204" {
     dockerfile = "Dockerfile"
     tags = ["runpod/pytorch:2.0.1-py3.10-cuda11.8.0-devel-ubuntu22.04"]
     contexts = {
-        scripts = "../../container-template"
-        proxy = "../../container-template/proxy"
-        logo = "../../container-template"
+        scripts = "container-template"
+        proxy = "container-template/proxy"
+        logo = "container-template"
     }
     args = {
         BASE_IMAGE = "nvidia/cuda:11.8.0-devel-ubuntu22.04"
@@ -62,9 +62,9 @@ target "210-py310-cuda1180-devel-ubuntu2204" {
     dockerfile = "Dockerfile"
     tags = ["runpod/pytorch:2.1.0-py3.10-cuda11.8.0-devel-ubuntu22.04"]
     contexts = {
-        scripts = "../../container-template"
-        proxy = "../../container-template/proxy"
-        logo = "../../container-template"
+        scripts = "container-template"
+        proxy = "container-template/proxy"
+        logo = "container-template"
     }
     args = {
         BASE_IMAGE = "nvidia/cuda:11.8.0-devel-ubuntu22.04"
@@ -78,9 +78,9 @@ target "211-py310-cuda1211-devel-ubuntu2204" {
     dockerfile = "Dockerfile"
     tags = ["runpod/pytorch:2.1.1-py3.10-cuda12.1.1-devel-ubuntu22.04"]
     contexts = {
-        scripts = "../../container-template"
-        proxy = "../../container-template/proxy"
-        logo = "../../container-template"
+        scripts = "container-template"
+        proxy = "container-template/proxy"
+        logo = "container-template"
     }
     args = {
         BASE_IMAGE = "nvidia/cuda:12.1.1-devel-ubuntu22.04"
@@ -94,9 +94,9 @@ target "220-py310-cuda1211-devel-ubuntu2204" {
     dockerfile = "Dockerfile"
     tags = ["runpod/pytorch:2.2.0-py3.10-cuda12.1.1-devel-ubuntu22.04"]
     contexts = {
-        scripts = "../../container-template"
-        proxy = "../../container-template/proxy"
-        logo = "../../container-template"
+        scripts = "container-template"
+        proxy = "container-template/proxy"
+        logo = "container-template"
     }
     args = {
         BASE_IMAGE = "nvidia/cuda:12.1.1-devel-ubuntu22.04"
@@ -109,9 +109,9 @@ target "221-py310-cuda1211-devel-ubuntu2204" {
     dockerfile = "Dockerfile"
     tags = ["runpod/pytorch:2.2.1-py3.10-cuda12.1.1-devel-ubuntu22.04"]
     contexts = {
-        scripts = "../../container-template"
-        proxy = "../../container-template/proxy"
-        logo = "../../container-template"
+        scripts = "container-template"
+        proxy = "container-template/proxy"
+        logo = "container-template"
     }
     args = {
         BASE_IMAGE = "nvidia/cuda:12.1.1-devel-ubuntu22.04"
