@@ -12,7 +12,7 @@ group "default" {
 
 target "gaussian-splatting" {
     dockerfile = "Dockerfile"
-    tags = ["runpod/pytorch:1.13.0-py3.10-cuda11.7.1-devel-ubuntu22.04"]
+    tags = ["runpod/pytorch:2.0.1-py3.10-cuda11.8.0-devel-ubuntu22.04"]
     contexts = {
         scripts = "container-template"
         proxy = "container-template/proxy"
@@ -20,8 +20,8 @@ target "gaussian-splatting" {
     }
     args = {
         BASE_IMAGE = "nvidia/cuda:11.8.0-devel-ubuntu22.04"
-        PYTHON_VERSION = "3.8"
-        TORCH = "torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu117"
+        PYTHON_VERSION = "3.10"
+        TORCH = "torch==2.0.1+cu118 torchvision==0.15.2+cu118 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118"
     }
 }
 
