@@ -47,7 +47,6 @@ RUN jupyter contrib nbextension install --user && \
 
 # Set up Colmap
 ARG COLMAP_GIT_COMMIT=3.8
-ARG CUDA_ARCHITECTURES=all
 ENV QT_XCB_GL_INTEGRATION=xcb_egl
 
 RUN apt-get update && \
@@ -79,7 +78,7 @@ RUN cd colmap && \
     git checkout FETCH_HEAD && \
     mkdir build && \
     cd build && \
-    cmake .. -GNinja -DCMAKE_CUDA_ARCHITECTURES=${CUDA_ARCHITECTURES} \
+    cmake .. -GNinja -DCMAKE_CUDA_ARCHITECTURES="70;72;75;80;86" \
         -DCMAKE_INSTALL_PREFIX=/colmap_installed && \
     ninja install
 RUN cd ../../ && rm -rf colmap
