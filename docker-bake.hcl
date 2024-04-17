@@ -1,5 +1,6 @@
 group "default" {
     targets = [
+        "gaussian-splatting",
         "191-py39-cuda111-devel-ubuntu2004",
         "1131-py38-cuda1171-devel-ubuntu2204",
         "201-py310-cuda1180-devel-ubuntu2204",
@@ -9,6 +10,20 @@ group "default" {
     ]
 }
 
+target "gaussian-splatting" {
+    dockerfile = "Dockerfile"
+    tags = ["gaussiansplatting/pytorch:1.12.1-py3.7.13-cuda11.6-devel-ubuntu20.04"]
+    contexts = {
+        scripts = "container-template"
+        proxy = "container-template/proxy"
+        logo = "container-template"
+    }
+    args = {
+        BASE_IMAGE = "nvidia/cuda:11.6.2-cudnn8-devel-ubuntu20.04"
+        PYTHON_VERSION = "3.7.13"
+        TORCH = "torch==1.12.1+cu116 torchvision==0.13.1+cu116 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu116"
+    }
+}
 
 target "191-py39-cuda111-devel-ubuntu2004" {
     dockerfile = "Dockerfile"
