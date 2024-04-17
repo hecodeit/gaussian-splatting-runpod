@@ -85,11 +85,15 @@ RUN jupyter contrib nbextension install --user && \
 
 
 # Set up Gaussian Splatting
-RUN pip install --upgrade --no-cache-dir plyfile
-RUN pip install --upgrade --no-cache-dir tqdm
+# Install necessary packages
+RUN apt-get update && \
+    apt install -y libglew-dev libassimp-dev libboost-all-dev libgtk-3-dev libopencv-dev libglfw3-dev libavdevice-dev libavcodec-dev libeigen3-dev libxxf86vm-dev libembree-dev && \
+    apt clean && apt install wget && rm -rf /var/lib/apt/lists/*
 RUN git clone https://github.com/graphdeco-inria/gaussian-splatting --recursive
-RUN cd gaussian-splatting && pip install --upgrade --no-cache-dir submodules/diff-gaussian-rasterization && \
-    pip install --upgrade --no-cache-dir submodules/simple-knn && \
+RUN cd gaussian-splatting && \
+    pip install plyfile tqdm && \
+    pip install submodules/diff-gaussian-rasterization && \
+    pip install submodules/simple-knn && \
     cd ..
 
 # Remove existing SSH host keys
